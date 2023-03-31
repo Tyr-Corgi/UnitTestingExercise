@@ -14,6 +14,7 @@ namespace UnitTestingExercise
         //For Example:
         public int Add(int num1, int num2, int num3)
         {
+            //throw new NotImplementedException(); - Use this after you create the tests
             return num1 + num2 + num3;
         }
 
@@ -37,7 +38,7 @@ namespace UnitTestingExercise
         // Create a Multiply method that passes 2 integers
         public int Multiply(int num1, int num2)
         {
-            return (num1 * num2);
+            return num1 * num2;
         }
 
 
@@ -48,7 +49,7 @@ namespace UnitTestingExercise
         // Create a Divide method that passes 2 integers
         public int Divide(int numerator, int denominator)
         {
-            return (numerator / denominator);
+            return numerator / denominator;
         }
 
         // Step 9: Navigate to the UnitTests.cs file and complete the DivideTest unit test method 

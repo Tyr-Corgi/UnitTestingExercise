@@ -7,6 +7,12 @@ namespace UnitTestingExercise.Tests
     {
         [Theory]
         [InlineData(2, 3, 5, 10)] //Add test data <-------
+        [InlineData(2, -3, 5, 4)]
+        [InlineData(-2, 3, 5, 6)]
+        [InlineData(5, 3, 5, 13)]
+        [InlineData(6, 3, 5, 14)]
+        [InlineData(10, 10, 10, 30)]
+
         public void AddTest(int num1, int num2, int num3, int expected)
         {
             //Start Step 3 here:
@@ -38,9 +44,9 @@ namespace UnitTestingExercise.Tests
 
             //Arrange
             Calculator challenger = new Calculator();
-                
+
             //Act
-            int actual = minuend - subtrhend;
+            int actual = challenger.Subtract(minuend, subtrhend);
 
             //Assert
             Assert.Equal(expected, actual);
@@ -60,7 +66,7 @@ namespace UnitTestingExercise.Tests
             Calculator challenger = new Calculator();
 
             //Act
-            int actual = num1 * num2;
+            int actual = challenger.Multiply(num1, num2);
 
             //Assert
             Assert.Equal(expected, actual);
@@ -79,7 +85,7 @@ namespace UnitTestingExercise.Tests
             //Arrange
             Calculator challenger = new Calculator();
             //Act
-            int actual = numerator / denominator;
+            int actual = challenger.Divide(numerator, denominator);
 
             //Assert
             Assert.Equal(expected, actual);
